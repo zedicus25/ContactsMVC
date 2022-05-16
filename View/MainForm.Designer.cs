@@ -1,6 +1,6 @@
-﻿namespace ContactsMVC
+﻿namespace ContactsMVC.View
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
