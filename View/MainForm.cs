@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ContactsMVC.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace ContactsMVC.View
 {
     public partial class MainForm : Form
     {
+        private ContactController _contactController;
         public MainForm()
         {
             InitializeComponent();
+            _contactController = new ContactController();
+            contactsLB.DataSource = _contactController.GetContacts();
         }
     }
 }
