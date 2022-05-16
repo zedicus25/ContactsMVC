@@ -1,10 +1,11 @@
-﻿using System;
+﻿using ContactsMVC.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ContactsMVC.View
+namespace ContactsMVC
 {
     internal static class Program
     {

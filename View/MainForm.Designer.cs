@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.contactsLB = new System.Windows.Forms.ListBox();
+            this.addBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // contactsLB
@@ -41,11 +42,22 @@
             this.contactsLB.Size = new System.Drawing.Size(236, 264);
             this.contactsLB.TabIndex = 0;
             // 
+            // addBtn
+            // 
+            this.addBtn.Location = new System.Drawing.Point(30, 304);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(79, 58);
+            this.addBtn.TabIndex = 1;
+            this.addBtn.Text = "Add";
+            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.addBtn);
             this.Controls.Add(this.contactsLB);
             this.Name = "MainForm";
             this.Text = "Form1";
@@ -56,6 +68,7 @@
         #endregion
 
         private System.Windows.Forms.ListBox contactsLB;
+        private System.Windows.Forms.Button addBtn;
     }
 }
 

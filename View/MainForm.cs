@@ -18,7 +18,14 @@ namespace ContactsMVC.View
         {
             InitializeComponent();
             _contactController = new ContactController();
-            contactsLB.DataSource = _contactController.GetContacts();
+            contactsLB.Items.AddRange(_contactController.GetContacts().ToArray());
+        }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+            AddingForm f = new AddingForm();
+            f.ShowDialog();
+            contactsLB.Items.Add(f.NewContact);
         }
     }
 }

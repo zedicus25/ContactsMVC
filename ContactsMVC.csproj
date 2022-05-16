@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Controller\ContactController.cs" />
     <Compile Include="Model\Contact.cs" />
+    <Compile Include="View\AddingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddingForm.Designer.cs">
+      <DependentUpon>AddingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\AddingForm.resx">
+      <DependentUpon>AddingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

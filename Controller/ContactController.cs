@@ -11,12 +11,6 @@ namespace ContactsMVC.Controller
         public ContactController()
         {
             _contacts = new List<Contact>();
-            //
-            //test data
-            //
-            _contacts.Add(new Contact("Tomas","Brush","USA", new List<string>() { "+15151515","+515151515"}));
-            _contacts.Add(new Contact("Bob","Bobski","Finland", new List<string>() { "+51511288","+81881118"}));
-            _contacts.Add(new Contact("Ihor","MoCcho","German", new List<string>() { "+81818185","+888599599"}));
         }
         public ContactController(List<Contact> contacts)
         {
@@ -25,6 +19,7 @@ namespace ContactsMVC.Controller
         }
         public void AddContact(Contact c)
         {
+            c.Id = _contacts.Count;
             _contacts.Add(c);
         }
         public void RemoveContact(Contact c)

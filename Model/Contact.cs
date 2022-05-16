@@ -9,6 +9,7 @@ namespace ContactsMVC.Model
         public string LastName { get; set; }
         public string Adress { get; set; }
         public List<string> Numbers { get; set; }
+        public int Id { get; set; }
 
         public Contact()
         {
