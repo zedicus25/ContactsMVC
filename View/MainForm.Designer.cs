@@ -28,47 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.contactsLB = new System.Windows.Forms.ListBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.contactPanel = new System.Windows.Forms.Panel();
             this.addBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // contactsLB
+            // contactPanel
             // 
-            this.contactsLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.contactsLB.FormattingEnabled = true;
-            this.contactsLB.ItemHeight = 20;
-            this.contactsLB.Location = new System.Drawing.Point(30, 24);
-            this.contactsLB.Name = "contactsLB";
-            this.contactsLB.Size = new System.Drawing.Size(236, 264);
-            this.contactsLB.TabIndex = 0;
+            this.contactPanel.AutoScroll = true;
+            this.contactPanel.Location = new System.Drawing.Point(12, 12);
+            this.contactPanel.Name = "contactPanel";
+            this.contactPanel.Size = new System.Drawing.Size(270, 512);
+            this.contactPanel.TabIndex = 2;
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(30, 304);
+            this.addBtn.BackColor = System.Drawing.Color.Transparent;
+            this.addBtn.BackgroundImage = global::ContactsMVC.Properties.Resources.addBtn;
+            this.addBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.addBtn.Location = new System.Drawing.Point(212, 458);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(79, 58);
+            this.addBtn.Size = new System.Drawing.Size(75, 75);
             this.addBtn.TabIndex = 1;
-            this.addBtn.Text = "Add";
-            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.UseVisualStyleBackColor = false;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(299, 536);
             this.Controls.Add(this.addBtn);
-            this.Controls.Add(this.contactsLB);
+            this.Controls.Add(this.contactPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Contacts";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox contactsLB;
         private System.Windows.Forms.Button addBtn;
+        private System.Windows.Forms.Panel contactPanel;
     }
 }
 

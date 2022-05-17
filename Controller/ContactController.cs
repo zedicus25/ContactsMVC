@@ -19,8 +19,13 @@ namespace ContactsMVC.Controller
         }
         public void AddContact(Contact c)
         {
-            c.Id = _contacts.Count;
-            _contacts.Add(c);
+            if (c == null)
+                return;
+            if(c.Name != String.Empty && c.Numbers.Count > 0)
+            {
+                c.Id = _contacts.Count;
+                _contacts.Add(c);
+            }
         }
         public void RemoveContact(Contact c)
         {
