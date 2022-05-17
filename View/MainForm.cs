@@ -14,7 +14,7 @@ namespace ContactsMVC.View
 {
     public partial class MainForm : Form
     {
-        private ContactController _contactController;
+        private ContactController _contactController = null;
         public MainForm()
         {
             InitializeComponent();
@@ -26,25 +26,10 @@ namespace ContactsMVC.View
             AddingForm f = new AddingForm();
             f.ShowDialog();
             _contactController.AddContact(f.NewContact);
-            AddContactToPanel();
+            contactsLB.AddContactToPanel(_contactController);
             GC.Collect(GC.GetGeneration(f));
         }
 
-        private void AddContactToPanel()
-        {
-            if (_contactController.GetContacts().Count == 0)
-                return;
-            ContactThumbnailControl c = new ContactThumbnailControl(_contactController.GetContacts().Last().Name,
-               _contactController.GetContacts().Last().LastName);
-            if (contactPanel.Controls.Count > 0)
-            {
-                if (_contactController.GetContacts().Count == 0)
-                    return;
-                c.Location = new Point(contactPanel.Controls[contactPanel.Controls.Count - 1].Location.X,
-                    contactPanel.Controls[contactPanel.Controls.Count - 1].Location.Y + 80);
-            }
-            contactPanel.Controls.Add(c);
-
-        }
+        
     }
 }

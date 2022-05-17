@@ -54,11 +54,23 @@
     <Compile Include="View\AddingForm.Designer.cs">
       <DependentUpon>AddingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Controls\AddingContactControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\AddingContactControl.Designer.cs">
+      <DependentUpon>AddingContactControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Controls\ContactThumbnailControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\Controls\ContactThumbnailControl.Designer.cs">
       <DependentUpon>ContactThumbnailControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\ListBoxForContactsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Controls\ListBoxForContactsControl.Designer.cs">
+      <DependentUpon>ListBoxForContactsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
@@ -81,8 +93,14 @@
     <EmbeddedResource Include="View\AddingForm.resx">
       <DependentUpon>AddingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Controls\AddingContactControl.resx">
+      <DependentUpon>AddingContactControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Controls\ContactThumbnailControl.resx">
       <DependentUpon>ContactThumbnailControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Controls\ListBoxForContactsControl.resx">
+      <DependentUpon>ListBoxForContactsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

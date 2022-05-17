@@ -29,37 +29,36 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.contactPanel = new System.Windows.Forms.Panel();
             this.addBtn = new System.Windows.Forms.Button();
+            this.contactsLB = new ContactsMVC.View.Controls.ListBoxForContactsControl();
             this.SuspendLayout();
-            // 
-            // contactPanel
-            // 
-            this.contactPanel.AutoScroll = true;
-            this.contactPanel.Location = new System.Drawing.Point(12, 12);
-            this.contactPanel.Name = "contactPanel";
-            this.contactPanel.Size = new System.Drawing.Size(270, 512);
-            this.contactPanel.TabIndex = 2;
             // 
             // addBtn
             // 
             this.addBtn.BackColor = System.Drawing.Color.Transparent;
             this.addBtn.BackgroundImage = global::ContactsMVC.Properties.Resources.addBtn;
             this.addBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.addBtn.Location = new System.Drawing.Point(212, 458);
+            this.addBtn.Location = new System.Drawing.Point(259, 513);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(75, 75);
             this.addBtn.TabIndex = 1;
             this.addBtn.UseVisualStyleBackColor = false;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
+            // contactsLB
+            // 
+            this.contactsLB.Location = new System.Drawing.Point(12, 12);
+            this.contactsLB.Name = "contactsLB";
+            this.contactsLB.Size = new System.Drawing.Size(300, 540);
+            this.contactsLB.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(299, 536);
+            this.ClientSize = new System.Drawing.Size(346, 600);
             this.Controls.Add(this.addBtn);
-            this.Controls.Add(this.contactPanel);
+            this.Controls.Add(this.contactsLB);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "Contacts";
@@ -69,7 +68,7 @@
 
         #endregion
         private System.Windows.Forms.Button addBtn;
-        private System.Windows.Forms.Panel contactPanel;
+        private Controls.ListBoxForContactsControl contactsLB;
     }
 }
 
