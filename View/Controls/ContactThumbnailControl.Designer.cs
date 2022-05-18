@@ -35,7 +35,7 @@
             // 
             // fotoPB
             // 
-            this.fotoPB.Image = global::ContactsMVC.Properties.Resources.defaultIcon;
+            this.fotoPB.Image = global::ContactsMVC.Properties.Resources.defaultIconSmall;
             this.fotoPB.InitialImage = null;
             this.fotoPB.Location = new System.Drawing.Point(0, 0);
             this.fotoPB.Name = "fotoPB";
@@ -52,6 +52,7 @@
             this.nameL.TabIndex = 1;
             this.nameL.Text = "name";
             this.nameL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nameL.Click += new System.EventHandler(this.nameL_Click);
             // 
             // ContactThumbnailControl
             // 

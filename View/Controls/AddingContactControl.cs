@@ -64,7 +64,8 @@ namespace ContactsMVC.View.Controls
             List<string> nums = new List<string>();
             foreach (var item in numbers)
             {
-                nums.Add(item.Text);
+                if(item.Text != String.Empty)
+                    nums.Add(item.Text);
             }
             return new Contact(nameTB.Text, lastNameTB.Text, adressTB.Text, nums);
         }

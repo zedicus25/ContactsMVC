@@ -37,7 +37,7 @@
             this.contactPanel.BackColor = System.Drawing.Color.Beige;
             this.contactPanel.Location = new System.Drawing.Point(13, 15);
             this.contactPanel.Name = "contactPanel";
-            this.contactPanel.Size = new System.Drawing.Size(270, 512);
+            this.contactPanel.Size = new System.Drawing.Size(295, 512);
             this.contactPanel.TabIndex = 3;
             // 
             // ListBoxForContactsControl
@@ -46,7 +46,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.contactPanel);
             this.Name = "ListBoxForContactsControl";
-            this.Size = new System.Drawing.Size(300, 540);
+            this.Size = new System.Drawing.Size(320, 540);
             this.ResumeLayout(false);
 
         }

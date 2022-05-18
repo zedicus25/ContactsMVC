@@ -30,8 +30,7 @@ namespace ContactsMVC.View.Controls
                 return;
             if (_contactController.GetContacts().Count == 0)
                 return;
-            ContactThumbnailControl c = new ContactThumbnailControl(_contactController.GetContacts().Last().Name,
-               _contactController.GetContacts().Last().LastName);
+            ContactThumbnailControl c = new ContactThumbnailControl(_contactController.GetContacts().Last());
             if (contactPanel.Controls.Count > 0)
             {
                 if (_contactController.GetContacts().Count == 0)
@@ -39,7 +38,7 @@ namespace ContactsMVC.View.Controls
                 c.Location = new Point(contactPanel.Controls[contactPanel.Controls.Count - 1].Location.X,
                     contactPanel.Controls[contactPanel.Controls.Count - 1].Location.Y + 80);
             }
-            c.Name = $"contact{_contactController.GetContacts().Count}";
+            c.Name = $"contact{_contactController.GetContacts().Last().Id}";
             contactPanel.Controls.Add(c);
 
         }

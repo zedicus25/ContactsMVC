@@ -49,7 +49,7 @@
             // 
             this.contactsLB.Location = new System.Drawing.Point(12, 12);
             this.contactsLB.Name = "contactsLB";
-            this.contactsLB.Size = new System.Drawing.Size(300, 540);
+            this.contactsLB.Size = new System.Drawing.Size(320, 540);
             this.contactsLB.TabIndex = 2;
             // 
             // MainForm
