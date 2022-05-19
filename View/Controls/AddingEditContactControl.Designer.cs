@@ -1,6 +1,6 @@
 ﻿namespace ContactsMVC.View.Controls
 {
-    partial class AddingContactControl
+    partial class AddingEditContactControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -30,7 +30,7 @@
         {
             this.addNumberBtn = new System.Windows.Forms.Button();
             this.number0TB = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.numberL = new System.Windows.Forms.Label();
             this.adressTB = new System.Windows.Forms.TextBox();
             this.adressL = new System.Windows.Forms.Label();
             this.lastNameTB = new System.Windows.Forms.TextBox();
@@ -58,16 +58,16 @@
             this.number0TB.TabIndex = 18;
             this.number0TB.Click += new System.EventHandler(this.TBSelected);
             // 
-            // label1
+            // numberL
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(8, 208);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 20);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Enter numbers:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.numberL.AutoSize = true;
+            this.numberL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numberL.Location = new System.Drawing.Point(8, 208);
+            this.numberL.Name = "numberL";
+            this.numberL.Size = new System.Drawing.Size(118, 20);
+            this.numberL.TabIndex = 17;
+            this.numberL.Text = "Enter numbers:";
+            this.numberL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // adressTB
             // 
@@ -134,7 +134,7 @@
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.Controls.Add(this.addNumberBtn);
             this.Controls.Add(this.number0TB);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.numberL);
             this.Controls.Add(this.adressTB);
             this.Controls.Add(this.adressL);
             this.Controls.Add(this.lastNameTB);
@@ -152,7 +152,7 @@
 
         private System.Windows.Forms.Button addNumberBtn;
         private System.Windows.Forms.TextBox number0TB;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label numberL;
         private System.Windows.Forms.TextBox adressTB;
         private System.Windows.Forms.Label adressL;
         private System.Windows.Forms.TextBox lastNameTB;

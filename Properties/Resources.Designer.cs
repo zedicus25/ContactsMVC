@@ -73,6 +73,16 @@ namespace ContactsMVC.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backArrow {
+            get {
+                object obj = ResourceManager.GetObject("backArrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap defaultContact {
             get {
                 object obj = ResourceManager.GetObject("defaultContact", resourceCulture);
@@ -86,6 +96,16 @@ namespace ContactsMVC.Properties {
         internal static System.Drawing.Bitmap defaultIconSmall {
             get {
                 object obj = ResourceManager.GetObject("defaultIconSmall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editButton {
+            get {
+                object obj = ResourceManager.GetObject("editButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

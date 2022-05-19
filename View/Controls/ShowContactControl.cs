@@ -46,8 +46,10 @@ namespace ContactsMVC.View.Controls
             Label l = new Label();
             l.Location = pos;
             l.Text = num;
+            l.AutoSize = true;
             l.Font = number0L.Font;
             return l;
         }
+
     }
 }

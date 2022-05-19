@@ -102,7 +102,7 @@ namespace ContactsMVC.View.Controls
             this.Controls.Add(this.contactNameL);
             this.Controls.Add(this.contactFotoPB);
             this.Name = "ShowContactControl";
-            this.Size = new System.Drawing.Size(320, 520);
+            this.Size = new System.Drawing.Size(320, 560);
             ((System.ComponentModel.ISupportInitialize)(this.contactFotoPB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

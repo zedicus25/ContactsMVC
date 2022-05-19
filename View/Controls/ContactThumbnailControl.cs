@@ -22,6 +22,8 @@ namespace ContactsMVC.View.Controls
         {
             ShowForm f = new ShowForm(_contact);
             f.ShowDialog();
+            _contact = f.NewContact;
+            nameL.Text = $"{_contact.Name} {_contact.LastName}";
         }
     }
 }

@@ -60,11 +60,11 @@
     <Compile Include="View\Forms\AddingForm.Designer.cs">
       <DependentUpon>AddingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Controls\AddingContactControl.cs">
+    <Compile Include="View\Controls\AddingEditContactControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Controls\AddingContactControl.Designer.cs">
-      <DependentUpon>AddingContactControl.cs</DependentUpon>
+    <Compile Include="View\Controls\AddingEditContactControl.Designer.cs">
+      <DependentUpon>AddingEditContactControl.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Controls\ContactThumbnailControl.cs">
       <SubType>UserControl</SubType>
@@ -77,6 +77,12 @@
     </Compile>
     <Compile Include="View\Controls\ListBoxForContactsControl.Designer.cs">
       <DependentUpon>ListBoxForContactsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\MainForm.cs">
       <SubType>Form</SubType>
@@ -108,14 +114,17 @@
     <EmbeddedResource Include="View\Forms\AddingForm.resx">
       <DependentUpon>AddingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Controls\AddingContactControl.resx">
-      <DependentUpon>AddingContactControl.cs</DependentUpon>
+    <EmbeddedResource Include="View\Controls\AddingEditContactControl.resx">
+      <DependentUpon>AddingEditContactControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Controls\ContactThumbnailControl.resx">
       <DependentUpon>ContactThumbnailControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Controls\ListBoxForContactsControl.resx">
       <DependentUpon>ListBoxForContactsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -137,8 +146,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="View\Resources\backArrow.png" />
     <Content Include="View\Resources\defaultContact.png" />
     <Content Include="View\Resources\defaultIconSmall.png" />
+    <Content Include="View\Resources\editButton.png" />
     <None Include="View\Resources\addBtn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,6 +1,6 @@
-﻿namespace ContactsMVC.View
+﻿namespace ContactsMVC.View.Forms
 {
-    partial class AddingForm
+    partial class EditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.addBtn = new System.Windows.Forms.Button();
             this.addControl = new ContactsMVC.View.Controls.AddingEditContactControl();
+            this.saveBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // addBtn
-            // 
-            this.addBtn.Location = new System.Drawing.Point(237, 12);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(75, 45);
-            this.addBtn.TabIndex = 6;
-            this.addBtn.Text = "Add";
-            this.addBtn.UseVisualStyleBackColor = true;
-            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // addControl
             // 
@@ -48,23 +38,34 @@
             this.addControl.Location = new System.Drawing.Point(12, 12);
             this.addControl.Name = "addControl";
             this.addControl.Size = new System.Drawing.Size(221, 400);
-            this.addControl.TabIndex = 7;
+            this.addControl.TabIndex = 8;
             // 
-            // AddingForm
+            // saveBtn
+            // 
+            this.saveBtn.Location = new System.Drawing.Point(239, 12);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(75, 65);
+            this.saveBtn.TabIndex = 9;
+            this.saveBtn.Text = "Save";
+            this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            // 
+            // EditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(324, 436);
+            this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.addControl);
-            this.Controls.Add(this.addBtn);
-            this.Name = "AddingForm";
-            this.Text = "AddingForm";
+            this.Name = "EditForm";
+            this.Text = "EditForm";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button addBtn;
+
         private Controls.AddingEditContactControl addControl;
+        private System.Windows.Forms.Button saveBtn;
     }
 }

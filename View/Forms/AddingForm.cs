@@ -26,8 +26,7 @@ namespace ContactsMVC.View
             {
                 contact = new Contact(addControl.NewContact());
                 this.Close();
-            }
-                
+            }   
         }
 
        
