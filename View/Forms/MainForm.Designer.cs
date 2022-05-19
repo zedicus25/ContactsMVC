@@ -38,7 +38,7 @@
             this.addBtn.BackColor = System.Drawing.Color.Transparent;
             this.addBtn.BackgroundImage = global::ContactsMVC.Properties.Resources.addBtn;
             this.addBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.addBtn.Location = new System.Drawing.Point(259, 513);
+            this.addBtn.Location = new System.Drawing.Point(288, 531);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(75, 75);
             this.addBtn.TabIndex = 1;
@@ -49,14 +49,14 @@
             // 
             this.contactsLB.Location = new System.Drawing.Point(12, 12);
             this.contactsLB.Name = "contactsLB";
-            this.contactsLB.Size = new System.Drawing.Size(320, 540);
+            this.contactsLB.Size = new System.Drawing.Size(365, 625);
             this.contactsLB.TabIndex = 2;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 600);
+            this.ClientSize = new System.Drawing.Size(404, 641);
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.contactsLB);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -1,6 +1,7 @@
 ﻿using ContactsMVC.Model;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ContactsMVC.Controller
 {
@@ -23,7 +24,10 @@ namespace ContactsMVC.Controller
                 return;
             if(c.Name != String.Empty && c.Numbers.Count > 0)
             {
-                c.Id = _contacts.Count;
+                if(_contacts.Count == 0)
+                    c.Id = 0;   
+                else
+                    c.Id = _contacts.Last().Id+1;
                 _contacts.Add(c);
             }
         }

@@ -18,7 +18,12 @@ namespace ContactsMVC.View
         public MainForm()
         {
             InitializeComponent();
+            this.Controls.Remove(contactsLB);
             _contactController = new ContactController();
+            contactsLB = new ListBoxForContactsControl(_contactController);
+            contactsLB.Location = new Point(12, 12);
+            this.Controls.Add(contactsLB);
+
         }
 
         private void addBtn_Click(object sender, EventArgs e)
@@ -26,7 +31,7 @@ namespace ContactsMVC.View
             AddingForm f = new AddingForm();
             f.ShowDialog();
             _contactController.AddContact(f.NewContact);
-            contactsLB.AddContactToPanel(_contactController);
+            contactsLB.AddContactToPanel(_contactController.GetContacts().Last());
             GC.Collect(GC.GetGeneration(f));
         }
 
