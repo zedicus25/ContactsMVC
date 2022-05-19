@@ -38,5 +38,14 @@ namespace ContactsMVC.Model
             return String.Format("{0} {1}", Name, LastName);
         }
 
+        public void EditContact(string name, string lastName,List<string> nums, string adress, int ID)
+        {
+            this.Name = name;
+            this.LastName = lastName;
+            this.Adress = adress;
+            this.Id = ID;
+            this.Numbers = new List<string>(nums);
+        }
+
     }
 }

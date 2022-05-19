@@ -1,29 +1,52 @@
-﻿using ContactsMVC.Model;
+﻿using ContactsMVC.Controller;
+using ContactsMVC.Model;
 using ContactsMVC.View.Forms;
+using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace ContactsMVC.View.Controls
 {
     public partial class ContactThumbnailControl : UserControl
     {
-        private Contact _contact;
+        private ContactController _contactController; 
         public ContactThumbnailControl()
         {
             InitializeComponent();
-            _contact = new Contact();
         }
-        public ContactThumbnailControl(Contact c):this()
+        public ContactThumbnailControl(ContactController controller):this()
         {
-            nameL.Text = $"{c.Name} {c.LastName}";
-            _contact = c;
+            _contactController = controller;
+            Contact contact = _contactController.GetContacts().Last();
+            nameL.Text = $"{contact.Name} {contact.LastName}";
+            
         }
 
         private void nameL_Click(object sender, System.EventArgs e)
         {
-            ShowForm f = new ShowForm(_contact);
+            Contact contact = _contactController.GetById(GetId());
+            ShowForm f = new ShowForm(contact);
             f.ShowDialog();
-            _contact = f.NewContact;
-            nameL.Text = $"{_contact.Name} {_contact.LastName}";
+            int id = contact.Id;
+            _contactController.GetById(GetId()).EditContact(f.NewContact.Name,
+                f.NewContact.LastName, f.NewContact.Numbers, f.NewContact.Adress, id);
+            nameL.Text = $"{contact.Name} {contact.LastName}";
+        }
+
+        private void deleteBtn_Click(object sender, System.EventArgs e)
+        {
+        }
+
+        private int GetId()
+        {
+            string str = this.Name;
+            char[] arr = str.Where(ch => Char.IsNumber(ch)).ToArray();
+            str = String.Empty;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                str += arr[i];
+            }
+            return Convert.ToInt32(str);
         }
     }
 }

@@ -60,7 +60,7 @@
             this.showContactControl1.Name = "showContactControl1";
             this.showContactControl1.Size = new System.Drawing.Size(324, 559);
             this.showContactControl1.TabIndex = 0;
-            //
+            // 
             // ShowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

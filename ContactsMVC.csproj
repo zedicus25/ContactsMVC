@@ -149,6 +149,7 @@
     <Content Include="View\Resources\backArrow.png" />
     <Content Include="View\Resources\defaultContact.png" />
     <Content Include="View\Resources\defaultIconSmall.png" />
+    <Content Include="View\Resources\deleteBtn.png" />
     <Content Include="View\Resources\editButton.png" />
     <None Include="View\Resources\addBtn.png" />
   </ItemGroup>

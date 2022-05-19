@@ -36,5 +36,14 @@ namespace ContactsMVC.Controller
         {
             return _contacts;
         }
+
+        public Contact GetById(int id)
+        {
+            if(id >= 0 && id < _contacts.Count)
+                return _contacts[id];
+            return null;
+        }
+
+        
     }
 }

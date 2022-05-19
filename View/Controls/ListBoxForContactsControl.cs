@@ -30,7 +30,7 @@ namespace ContactsMVC.View.Controls
                 return;
             if (_contactController.GetContacts().Count == 0)
                 return;
-            ContactThumbnailControl c = new ContactThumbnailControl(_contactController.GetContacts().Last());
+            ContactThumbnailControl c = new ContactThumbnailControl(_contactController);
             if (contactPanel.Controls.Count > 0)
             {
                 if (_contactController.GetContacts().Count == 0)
