@@ -15,11 +15,13 @@ namespace ContactsMVC.View
     public partial class MainForm : Form
     {
         private ContactController _contactController = null;
+        private WriteReadController _writeReadController = null;
         public MainForm()
         {
             InitializeComponent();
             this.Controls.Remove(contactsLB);
-            _contactController = new ContactController();
+            _writeReadController = new WriteReadController();
+            _contactController = new ContactController(_writeReadController.ReadFromFile());
             contactsLB = new ListBoxForContactsControl(_contactController);
             contactsLB.Location = new Point(12, 12);
             this.Controls.Add(contactsLB);
@@ -35,6 +37,10 @@ namespace ContactsMVC.View
             GC.Collect(GC.GetGeneration(f));
         }
 
-        
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _writeReadController.WriteToFile(_contactController.GetContacts());
+        }
+
     }
 }

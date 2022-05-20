@@ -17,6 +17,7 @@ namespace ContactsMVC.View.Controls
         public ListBoxForContactsControl(ContactController controller) : this() 
         {
             _contactController = controller;
+            GenerateView(_contactController.GetContacts());
         }
 
         public void AddContactToPanel(Contact con)
